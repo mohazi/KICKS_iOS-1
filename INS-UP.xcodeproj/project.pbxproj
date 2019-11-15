@@ -16,6 +16,10 @@
 		0E7A20E1237DC52100B8BB2E /* RegisterDetailAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A20DB237DC52100B8BB2E /* RegisterDetailAddressViewController.swift */; };
 		0E7A20E2237DC52100B8BB2E /* RegisterCompanyNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A20DC237DC52100B8BB2E /* RegisterCompanyNameViewController.swift */; };
 		0E7A20E3237DC52100B8BB2E /* RegisterCompanyFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7A20DD237DC52100B8BB2E /* RegisterCompanyFieldViewController.swift */; };
+		0EA94E47237F1140009C4C39 /* DetailFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA94E46237F1140009C4C39 /* DetailFieldViewController.swift */; };
+		0EA94E49237F12C9009C4C39 /* ExistProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA94E48237F12C9009C4C39 /* ExistProjectViewController.swift */; };
+		0EA94E4B237F1318009C4C39 /* WorkInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA94E4A237F1318009C4C39 /* WorkInfoViewController.swift */; };
+		0EA94E4D237F1B09009C4C39 /* EstimateInfo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EA94E4C237F1B09009C4C39 /* EstimateInfo.storyboard */; };
 		0EAA1AFC237ECEEA0049C0B0 /* RegisterStartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA1AFB237ECEEA0049C0B0 /* RegisterStartViewController.swift */; };
 		510A05808693E090F8D91F70 /* Pods_INS_UP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4517DD33FFA8A9A0912C93CC /* Pods_INS_UP.framework */; };
 		DA5DA469237DB5120005FB8B /* LoginMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5DA468237DB5120005FB8B /* LoginMainViewController.swift */; };
@@ -55,6 +59,10 @@
 		0E7A20DB237DC52100B8BB2E /* RegisterDetailAddressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterDetailAddressViewController.swift; sourceTree = "<group>"; };
 		0E7A20DC237DC52100B8BB2E /* RegisterCompanyNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCompanyNameViewController.swift; sourceTree = "<group>"; };
 		0E7A20DD237DC52100B8BB2E /* RegisterCompanyFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCompanyFieldViewController.swift; sourceTree = "<group>"; };
+		0EA94E46237F1140009C4C39 /* DetailFieldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFieldViewController.swift; sourceTree = "<group>"; };
+		0EA94E48237F12C9009C4C39 /* ExistProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExistProjectViewController.swift; sourceTree = "<group>"; };
+		0EA94E4A237F1318009C4C39 /* WorkInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkInfoViewController.swift; sourceTree = "<group>"; };
+		0EA94E4C237F1B09009C4C39 /* EstimateInfo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EstimateInfo.storyboard; sourceTree = "<group>"; };
 		0EAA1AFB237ECEEA0049C0B0 /* RegisterStartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterStartViewController.swift; sourceTree = "<group>"; };
 		4517DD33FFA8A9A0912C93CC /* Pods_INS_UP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INS_UP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56771ACD9413B24BE47E1B1E /* Pods-INS-UP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INS-UP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INS-UP/Pods-INS-UP.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +117,16 @@
 			path = SignUpETC;
 			sourceTree = "<group>";
 		};
+		0EA94E45237F1118009C4C39 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EA94E46237F1140009C4C39 /* DetailFieldViewController.swift */,
+				0EA94E48237F12C9009C4C39 /* ExistProjectViewController.swift */,
+				0EA94E4A237F1318009C4C39 /* WorkInfoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		659A7A9F5232A7B3C6D4FA1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +148,8 @@
 			isa = PBXGroup;
 			children = (
 				DAB7A07C2376F41D0006CBCF /* Estimate.storyboard */,
+				0EA94E4C237F1B09009C4C39 /* EstimateInfo.storyboard */,
+				0EA94E45237F1118009C4C39 /* ViewController */,
 			);
 			path = Estimate;
 			sourceTree = "<group>";
@@ -356,6 +376,7 @@
 				0E7A20D7237DC51100B8BB2E /* RegisterCompany.storyboard in Resources */,
 				DAB7A07B2376F3C40006CBCF /* MyPage.storyboard in Resources */,
 				DAC1A2C5237D5076000E21DE /* MGothic_R.otf in Resources */,
+				0EA94E4D237F1B09009C4C39 /* EstimateInfo.storyboard in Resources */,
 				DAB7A0792376F3B10006CBCF /* Home.storyboard in Resources */,
 				DA68387223642763004D07B0 /* Assets.xcassets in Resources */,
 				DAC1A2C2237D5076000E21DE /* MGothic_M.otf in Resources */,
@@ -411,6 +432,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EA94E47237F1140009C4C39 /* DetailFieldViewController.swift in Sources */,
 				0E7A20E3237DC52100B8BB2E /* RegisterCompanyFieldViewController.swift in Sources */,
 				DAF1C9FE2375B85300B3EF31 /* SocketIOManager.swift in Sources */,
 				DAB7A08A237729DE0006CBCF /* ChatMessageCell.swift in Sources */,
@@ -426,10 +448,12 @@
 				DAC1A2BD237D4FAF000E21DE /* CALayerExtension.swift in Sources */,
 				DA68386B23642762004D07B0 /* SceneDelegate.swift in Sources */,
 				DA5DA469237DB5120005FB8B /* LoginMainViewController.swift in Sources */,
+				0EA94E4B237F1318009C4C39 /* WorkInfoViewController.swift in Sources */,
 				0E7A20E0237DC52100B8BB2E /* RegisterCEONameViewController.swift in Sources */,
 				0E49DD41237E7CE3007D9F43 /* RegisterPhoneNumberViewController.swift in Sources */,
 				DAB7A088237728560006CBCF /* ColorExtension.swift in Sources */,
 				DAC1A2BB237D4CCD000E21DE /* HomeMainViewController.swift in Sources */,
+				0EA94E49237F12C9009C4C39 /* ExistProjectViewController.swift in Sources */,
 				0E7A20DF237DC52100B8BB2E /* AddressTableViewCell.swift in Sources */,
 				DAC1A2C8237D50D4000E21DE /* FontExtension.swift in Sources */,
 				DAB7A0862377103E0006CBCF /* ChatRoomViewController.swift in Sources */,
