@@ -10,6 +10,7 @@ import UIKit
 
 class RegisterCompanyNameViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var companyNameTextField: UITextField!
     
     @IBOutlet weak var nextButton: UIButton!
@@ -23,8 +24,12 @@ class RegisterCompanyNameViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        titleLabel.font = UIFont.MGothic(type: .r, size: 20)
+        companyNameTextField.font = UIFont.MGothic(type: .r, size: 20)
         companyNameTextField.text = ""
         nextButton.layer.cornerRadius = 22
+        nextButton.titleLabel?.font = UIFont.MGothic(type: .m, size: 14)
     }
     
 

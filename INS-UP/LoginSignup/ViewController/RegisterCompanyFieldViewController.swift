@@ -10,6 +10,16 @@ import UIKit
 
 class RegisterCompanyFieldViewController: UIViewController {
 
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var radio1Label: UILabel!
+    @IBOutlet weak var radio2Label: UILabel!
+    @IBOutlet weak var radio3Label: UILabel!
+    @IBOutlet weak var radio4Label: UILabel!
+    @IBOutlet weak var radio5Label: UILabel!
+    @IBOutlet weak var radio6Label: UILabel!
+    @IBOutlet weak var radio7Label: UILabel!
+    @IBOutlet weak var radio8Label: UILabel!
+    
     @IBOutlet weak var radio1: UIButton!
     @IBOutlet weak var radio2: UIButton!
     @IBOutlet weak var radio3: UIButton!
@@ -31,6 +41,16 @@ class RegisterCompanyFieldViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        titleLabel.font = UIFont.MGothic(type: .r, size: 20)
+        radio1Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio2Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio3Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio4Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio5Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio6Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio7Label.font = UIFont.MGothic(type: .r, size: 18)
+        radio8Label.font = UIFont.MGothic(type: .r, size: 18)
+        etcTextField.font = UIFont.MGothic(type: .r, size: 17)
 
         radioArr.append(radio1)
         radioArr.append(radio2)
@@ -42,8 +62,8 @@ class RegisterCompanyFieldViewController: UIViewController {
         radioArr.append(radio8)
         
         for i in radioArr {
-            i.setImage(UIImage.init(named: "reveal"), for: .normal)
-            i.setImage(UIImage.init(named: "select"), for: .selected)
+            i.setImage(UIImage.init(named: "ic_reveal"), for: .normal)
+            i.setImage(UIImage.init(named: "ic_select"), for: .selected)
             i.isSelected = false
             i.showsTouchWhenHighlighted = true
         }
@@ -51,6 +71,7 @@ class RegisterCompanyFieldViewController: UIViewController {
         etcTextField.isEnabled = false
         
         nextButton.layer.cornerRadius = 22
+        nextButton.titleLabel?.font = UIFont.MGothic(type: .m, size: 14)
     }
     
     @IBAction func radioClicked(_ sender: UIButton) {

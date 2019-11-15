@@ -9,9 +9,13 @@
 import UIKit
 import Alamofire
 
-class RegisterCompanyAddressViewController: UIViewController, UISearchBarDelegate {
+class RegisterCompanyAddressViewController: UIViewController {
 
-    @IBOutlet weak var addressSearchBar: UISearchBar!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var selectLabel: UILabel!
+    
+    @IBOutlet weak var searchTextField: UITextField!
+    
     var str: String?
     
     @IBOutlet weak var addressTableView: UITableView!
@@ -29,34 +33,27 @@ class RegisterCompanyAddressViewController: UIViewController, UISearchBarDelegat
 
         // Do any additional setup after loading the view.
         
-        /*if let searchBarBackground = addressSearchBar.subviews.first {
-            searchBarBackground.backgroundColor = UIColor.init(named: "veryLightPink")
-            searchBarBackground.frame.size.height = 44
-            searchBarBackground.layer.cornerRadius = 22
-            searchBarBackground.clipsToBounds = true
-        }*/
+        titleLabel.font = UIFont.MGothic(type: .r, size: 20)
+        selectLabel.font = UIFont.MGothic(type: .r, size: 12)
         
-        let searchTextField = addressSearchBar.value(forKey: "searchField") as? UITextField
-        searchTextField?.textColor = UIColor.init(named: "black")
-        searchTextField?.backgroundColor = UIColor.init(named: "veryLightPink")
-        searchTextField?.font = searchTextField?.font?.withSize(14)
+        searchTextField.backgroundColor = UIColor.init(named: "veryLightPink")
+        searchTextField.font = UIFont.MGothic(type: .r, size: 14)
+        searchTextField.layer.cornerRadius = 22
+        let paddingView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: 47, height: 44))
+        searchTextField.leftView = paddingView
+        searchTextField.leftViewMode = .always
         
         addressTableView.rowHeight = 80
-        
         addressTableView.dataSource = self
         addressTableView.delegate = self
-        
-        addressSearchBar.delegate = self
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        //print("searchBarClick")
-        let searchBarTextField = searchBar.value(forKey: "searchField") as? UITextField
-        
-        str = searchBarTextField?.text
+    @IBAction func searchTextFieldDidEndOnExit(_ sender: Any) {
+        selectLabel.isHidden = false
+        str = searchTextField.text
         
         let url = "http://www.juso.go.kr/addrlink/addrLinkApi.do"
-        let param: [String : Any] =   [ "confmKey" : "devU01TX0FVVEgyMDE5MTExMjIwMTEyMDEwOTE4ODM=",
+        let param: [String : Any] =   [ "confmKey" : "devU01TX0FVVEgyMDE5MTExNTA0MzcxMDEwOTE5NTI=",
                                         "currentPage" : 1,
                                         "countPerPage" : 100,
                                         "keyword" : str ?? "",
@@ -64,7 +61,6 @@ class RegisterCompanyAddressViewController: UIViewController, UISearchBarDelegat
         AF.request(url, method: .post, parameters: param, encoding: URLEncoding.httpBody, headers: [:]).responseJSON { response in
             switch response.result {
             case .success(let item):
-                
                 // totalCount, errorCode, errorMessage
                 // jibunAddr, roadAddr
             
@@ -106,7 +102,7 @@ class RegisterCompanyAddressViewController: UIViewController, UISearchBarDelegat
             }
         }
     }
-
+    
     /*
     // MARK: - Navigation
 
@@ -133,7 +129,9 @@ extension RegisterCompanyAddressViewController: UITableViewDataSource, UITableVi
         
         cell.addressImageView.image = UIImage.init(named: "location")
         cell.address1Label.text = jusoList[indexPath.row].jibunAddr
+        cell.address1Label.font = UIFont.MGothic(type: .r, size: 16)
         cell.address2Label.text = "[도로명] " + jusoList[indexPath.row].roadAddr!
+        cell.address2Label.font = UIFont.MGothic(type: .r, size: 12)
         
         return cell
     }
